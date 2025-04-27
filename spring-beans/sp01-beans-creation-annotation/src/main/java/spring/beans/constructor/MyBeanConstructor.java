@@ -6,7 +6,13 @@ import org.springframework.stereotype.Component;
 public class MyBeanConstructor {
 	public void BeanFromAnnotationConstructor() {
 		System.out.println("BeanFromAnnotationConstructor");
+		
+		
 
+	}
+	
+	public void Hello() {
+		
 	}
 
 }
