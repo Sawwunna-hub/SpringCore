@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    <bean class="spring.beans.constructor.MyBeanConstructor" id="myBeanconstructor" name="myBeanconstructor1"></bean>
+    
+    <bean class="spring.beans.method.MyBeanInstanceMethod" id="BeanInstanceMethod" name="myBeanconstructor1"></bean>
+    <bean factory-bean="BeanInstanceMethod" factory-method="BeanFromMethod"></bean>
+    
+    <bean class="spring.beans.method.MyBeanStaticMethod" factory-method="BeanFromStaticMethod"></bean>
+    
+    <bean class="spring.beans.constructor.MyBeanConstructorArg" > <constructor-arg value="Saw xml arg"></constructor-arg></bean>
+    
+
+</beans>
